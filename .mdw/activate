@@ -1,6 +1,7 @@
 MDW_HOME="`dirname \"$0\"`"
 MDW_HOME="`( cd \"$MDW_HOME\" && pwd )`" 
 MDW_TEMPLATE="$MDW_HOME/template.md"
+MDW_ACTIVATE="$MDW_HOME/activate"
 MDW_DEACTIVATE="$MDW_HOME/deactivate"
 MDW_TEX_PREAMBLE="$MDW_HOME/preamble.tex"
 
@@ -13,6 +14,10 @@ origin(){
 	git push -u origin master
 }
 
+update(){
+	git pull update master
+	source "$MDW_ACTIVATE"
+}
 
 pdf(){
 	echo $1
