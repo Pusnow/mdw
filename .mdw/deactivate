@@ -1,0 +1,5 @@
+unalias nd
+unalias deactivate
+unset -f pdf
+MDW_HOME=""
+MDW_TEMPLATE=""
