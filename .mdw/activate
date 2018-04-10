@@ -8,6 +8,12 @@ alias nd='cp $MDW_TEMPLATE'
 alias deactivate='source $MDW_DEACTIVATE'
 
 
+origin(){
+	git remote add origin $1
+	git push -u origin master
+}
+
+
 pdf(){
 	echo $1
 	if [ -d $1 ]
@@ -23,5 +29,3 @@ pdf(){
       fi
 
 }
-
-
