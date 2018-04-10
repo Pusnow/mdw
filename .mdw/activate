@@ -2,6 +2,7 @@ MDW_HOME="`dirname \"$0\"`"
 MDW_HOME="`( cd \"$MDW_HOME\" && pwd )`" 
 MDW_TEMPLATE="$MDW_HOME/template.md"
 MDW_DEACTIVATE="$MDW_HOME/deactivate"
+MDW_TEX_PREAMBLE="$MDW_HOME/preamble.tex"
 
 alias nd='cp $MDW_TEMPLATE'
 alias deactivate='source $MDW_DEACTIVATE'
@@ -15,7 +16,7 @@ pdf(){
 	else
 		if [ ${1: -3}==".md" ]       #  this is the snag
 		then
-			pandoc -o "$1.pdf" "$1"
+			pandoc -o "$1.pdf" "$1" -H "$MDW_TEX_PREAMBLE"
 		else
 			echo try md file
 		fi
