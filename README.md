@@ -1,9 +1,11 @@
 # mdw
 My Markdown Wordprocessor
 
-	function mdw(){
-		git clone https://github.com/Pusnow/mdw.git "$1"
+	function mdw2(){
+		git init "$1"
 		cd "$1"
-		git remote rename origin update
-		git branch --unset-upstream
+		git submodule add https://github.com/Pusnow/mdw.git .mdw
+		cp .mdw/.gitignore .
+		git add -A
+		git commit -m "Init MDW"
 	}
