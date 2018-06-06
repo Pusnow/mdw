@@ -15,7 +15,9 @@ origin(){
 }
 
 update(){
-	git pull update master
+	git submodule update --recursive --remote
+	git add $MDW_HOME
+	git commit -m "Update MDW"
 	source "$MDW_ACTIVATE"
 }
 
