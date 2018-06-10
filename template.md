@@ -1,4 +1,4 @@
 ---
-geometry: margin=3cm
+geometry: margin=2.5cm
 mainfont: "Noto Serif CJK KR"
 ---
