@@ -6,21 +6,8 @@ MDW_DEACTIVATE="$MDW_HOME/deactivate"
 MDW_TEX_PREAMBLE="$MDW_HOME/preamble.tex"
 
 alias nd='cp $MDW_TEMPLATE'
-alias deactivate='source $MDW_DEACTIVATE'
 
-
-origin(){
-	git remote add origin $1
-	git push -u origin master
-}
-
-update(){
-	git submodule update --recursive --remote
-	git commit -m "Update MDW" $MDW_HOME
-	source "$MDW_ACTIVATE"
-}
-
-pdf(){
+mpdf(){
 	echo $1
 	if [ -d $1 ]
 	then
