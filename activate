@@ -7,7 +7,7 @@ MDW_TEX_PREAMBLE="$MDW_HOME/preamble.tex"
 
 alias nd='cp $MDW_TEMPLATE'
 
-mpdf(){
+mdw(){
 	echo $1
 	if [ -d $1 ]
 	then
